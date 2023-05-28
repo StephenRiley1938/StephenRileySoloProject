@@ -1,0 +1,30 @@
+cabal-version:      2.4
+name:               emurgo-project
+version:            0.1.0.0
+synopsis:           See README for more info
+tested-with:        GHC==8.10.7
+
+description:        My solo project for EMURGO Academy's Haskell course
+homepage:
+license:            MIT
+license-file:       LICENSE
+author:
+maintainer:
+
+extra-source-files:
+    CHANGELOG.md
+    README.md
+
+executable emurgo-project
+    main-is:          Main.hs
+
+    -- Modules included in this executable, other than Main.
+    other-modules:    Actions
+                    , Lib
+                    , Types
+
+    build-depends:
+        base ^>=4.14.1.0
+
+    hs-source-dirs:   app, src
+    default-language: Haskell2010

@@ -1,0 +1,10 @@
+{
+  "workbench.colorTheme": "Dracula",
+  "editor.fontSize": 16,
+  "workbench.iconTheme": "vscode-icons",
+  "haskell.plugin.ghcide-type-lenses.globalOn": false,
+  "haskell.plugin.importLens.codeLensOn": false,
+  "gitpod.openInStable.neverPrompt": true,
+  "redhat.telemetry.enabled": true,
+  "vsicons.dontShowNewVersionMessage": true,
+}
