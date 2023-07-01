@@ -26,6 +26,7 @@ executable emurgo-project
     build-depends:
         base ^>=4.16.4.0
       , directory
+      , containers
       , mtl >= 2.3.1
 
     hs-source-dirs:   app, src
