@@ -72,8 +72,8 @@ printSeatingChart audProps soldSeatsState = do
 --                    Seating Chart        
 --            Available (#) -- Sold (*)  
 --                 Seats 1 thru 30       
---         123456789012345678901234567890
--- Row A   ***###***###*########*****####
+--         123456789012345678901234567890   Price $ (Per Seat In Row)
+-- Row A   ***###***###*########*****####             12.50
 
     -- Center a given String in a longer String of n spaces (unless it is shorter).
     centerText :: String -> Int -> String
@@ -99,7 +99,7 @@ printSeatingChart audProps soldSeatsState = do
                     in  prf ++ [getSeatRow $ head row] -- Add Row letter to prf.
                             ++  take ((length padLeft) - ((length prf) + 1)) padLeft -- Remove leading spaces from padLeft to line stuff up.
                             ++  getRowOfSeatStates row
-                            ++  printf "%18.2f" (getSeatPrice $ head row) -- Add Row letter to prf.
+                            ++  printf "%18.2f" (getSeatPrice $ head row) -- Add Row price to prf.
                               ) (getAudSeats audProps)
   mapM_ putStrLn $ "":h1:h2:h3:h4:listOfRowStrings
 
